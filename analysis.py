@@ -15,7 +15,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.model_selection import train_test_split
 
 def unseen_text(message):
-	df = pd.read_csv("data.csv" usecols=['tweet', 'sentiment'])
+	df = pd.read_csv("data.csv", usecols=['tweet', 'sentiment'])
 
 	# Return a translation table usable for str.translate()
 	df['tweet'] = df['tweet'].str.translate(str.maketrans('','', string.punctuation))
