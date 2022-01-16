@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Detector</title>
+
+    <!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body style="background-color: #c2d2bd;">
+    
+
+<!-- header section starts  -->
+
+<header>
+
+<div class="container">
+
+    <a href="{{ url_for('home')}}" class="logo"><span>D</span>epression <span>D</span>etector</a>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="{{ url_for('home')}}">Home</a></li>
+            <li><a href="{{ url_for('predictor')}}">Predictor</a></li>
+            <li><a href="{{ url_for('work')}}">Experimental Results</a></li>
+        </ul>
+    </nav>
+
+    <div class="fas fa-bars"></div>
+
+</div>
+
+</header>
+
+<!-- header section ends  -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+<div class="container">
+
+    <div class="row min-vh-100 align-items-center text-center text-md-left">
+
+        <div class="col-md-6 pr-md-5" data-aos="zoom-in">
+            <img src="static/images/home.svg" width="100%" alt="">
+        </div>
+
+        <div class="col-md-6 pl-md-5 content" data-aos="fade-left" style="text-align: justify;">
+            <h3>Depressive Sentiment Analysis with the Implementation of Machine Learning.</h3>
+            <h2>A web application that estimates the likelihood of depression based on the entered text.</h2>
+            <a href="#about"><button class="button">Learn More</button></a>
+        </div>
+
+    </div>
+</div>
+
+</section>
+
+
+<!-- home section ends -->
+
+<!-- about section start  -->
+
+<section class="about" id="about" style="background-color: #fae5df;">
+
+<div class="container">
+    <div class="row min-vh-100 align-items-center">
+        <div class="col-md content" data-aos="fade-right">
+            <div class="box"  style="text-align: justify;">
+                <h3 class="heading">Development of Depression Detection Model with the Implementation of Ensemble Classifiers and Multi-layer Perceptron.</h3>
+                <h3> <i class="fas fa-stethoscope"></i> </h3>
+                <p><b>NEED:</b> 
+                In this era of digital connectivity and consequent increasing human disconnection, depression numbers are rising at an alarming rate. According to World Health Organization, globally, more than 300 million people of all ages suffer from depression and at it's worst depression can lead to suicide. In order to detect such disorder, machine learning techniques could conceivably provide exceptional attributes that facilitate in scrutinizing the unique patterns that remain unseen and process them to determine the psychological state of social media users.</p>
+
+                <p><b>SIGNIFICANCE OF PROPOSED WORK:</b> While the difficulty of collecting data in traditional studies raises a bar for investigating the cues of depression, the user-generated media left by depression sufferers on social media enable us to learn more about depression signs. Of the disorders, depression is among the major risk factor. Knowing what is the level of depression will help to detect the sufferers at early stages and ultimately, will help in alleviating the suicide crisis.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!-- about section ends -->
+
+
+
+<!-- post section starts  -->
+
+<section class="post" id="post">
+
+    <div class="container min-vh-100">
+
+        <h1 class="heading">Depression Level Detector & Experimental Results</h1>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="fade-right" style="background-color: #eddcd9;">
+                <img src="static/images/depression4.svg" alt="">
+                <div class="content">
+                    
+                    <a href="{{ url_for('predictor')}}"><h3>Depression Detector</h3></a>
+                    <p>This detector determines the likelihood of depression on the basis of entered text.</p><br><br>
+                    <a href="{{ url_for('predictor')}}"><button class="button">Predict Now</button></a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-left" style="background-color: #eddcd9;">
+                <img src="static/images/results.svg" alt="">
+                <div class="content">
+                    
+                    <a href="{{ url_for('work')}}"><h3>Experimental Results</h3></a>
+                    <p>This section presents the unigrams, bigrams and trigrams in word network. Also, validates the efficiency and effectiveness of applied algorithms.</p>
+                    <a href="{{ url_for('work')}}"><button class="button">Learn More</button></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- post section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="container"><br>
+        <p class="copyright" style="text-align:center; font-size: 18px;">© Depression Detector. All Rights Reserved.</p>
+    </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<!-- aos js file cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- custom js link  -->
+<script src="static/js/main.js"></script>
+
+
+<script>
+
+AOS.init({
+    duration:1000,
+    delay:400
+});
+
+</script>
+
+</body>
+</html>

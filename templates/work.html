@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimental Results</title>
+
+    <!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body style="background-color: #fefbe9;">
+    
+
+<!-- header section starts  -->
+
+<header>
+
+<div class="container">
+
+    <a href="{{ url_for('home')}}" class="logo"><span>D</span>epression <span>D</span>etector</a>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="{{ url_for('home')}}">Home</a></li>
+            <li><a href="{{ url_for('predictor')}}">Predictor</a></li>
+            <li><a href="{{ url_for('work')}}">Experimental Results</a></li>
+        </ul>
+    </nav>
+
+    <div class="fas fa-bars"></div>
+
+</div>
+
+</header>
+
+<!-- header section ends  -->
+
+<!-- home section starts  -->
+<br><br><br><br><br><br><br><br>
+<section class="home" id="home">
+
+<div class="container">
+
+    <div class="row min-vh-100 align-items-center text-center text-md-left">
+        <div class="content" data-aos="fade-left">
+    
+            <h2 style="text-align: justify;">Sentiment analysis is the utmost progressive research field in natural language processing that focuses on identifying the attitude, opinion, feelings and emotions of people towards entities and their facets. The social networks, forums, content sharing services and micro-blogging sites holds valuable and vast information about public opinion and can be considered as data sources in sentiment analysis process.<br> 
+            In this work, Twitter was regarded as the data source and TWINT (Twitter intelligence tool), an unconventional python programmed Twitter scraping tool was utilized to scrape 1500 (710 with depressive sentiment and 790 with non-depressive sentiment) tweets.Thereafter, the acquired raw data was cleaned using regular expression(re) library and further, was transformed by applying CountVectorizer and TfidfTransformer.</h2>
+
+            <h3 class="heading" style="text-align: center;">Most Frequently Occurring Unigrams, Bigrams & Trigrams</h3><br>
+            <div class="row min-vh-100">
+
+                <div class="col-md-4 pr-md-3" data-aos="fade-left">
+                    <img src="static/images/unigram.png" width=100% height=90% alt="">
+                </div>
+
+                <div class="col-md-4 pr-md-3" data-aos="fade-up">
+                    <img src="static/images/bigram.png" width=100% height=90% alt="">
+                </div>
+
+                <div class="col-md-4 pl-md-3 content" data-aos="fade-right">
+                    <img src="static/images/trigram.png" width=100% height=90% alt="">
+                </div>
+
+            </div>
+
+            <h3 class="heading" style="text-align: center;">Experimental Results</h3>
+                <table class="table table-striped" style="font-size: 20px;">
+                  <thead>
+                    <tr>
+                      <th scope="col"><b>Applied Classifiers</b></th>
+                      <th scope="col"><b>Accuracy</b></th>
+                      <th scope="col"><b>Precision</b></th>
+                      <th scope="col"><b>Recall</b></th>
+                      <th scope="col"><b>F1-Score</b></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Support Vector Classifier</th>
+                      <td>0.90</td>
+                      <td>0.91</td>
+                      <td>0.91</td>
+                      <td>0.90</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Multinomial Naive Bayes</th>
+                      <td>0.87</td>
+                      <td>0.87</td>
+                      <td>0.87</td>
+                      <td>0.87</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Logistic Regression</th>
+                      <td>0.90</td>
+                      <td>0.90</td>
+                      <td>0.90</td>
+                      <td>0.90</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Random Forest</th>
+                      <td>0.82</td>
+                      <td>0.84</td>
+                      <td>0.83</td>
+                      <td>0.82</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Gradient Boosting</th>
+                      <td>0.81</td>
+                      <td>0.81</td>
+                      <td>0.81</td>
+                      <td>0.81</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Multilayer Perceptron</th>
+                      <td><b>0.91</b></td>
+                      <td>0.91</td>
+                      <td>0.91</td>
+                      <td>0.91</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Majority Voting Classifier</th>
+                      <td>0.90</td>
+                      <td>0.90</td>
+                      <td>0.90</td>
+                      <td>0.90</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Weighted Average Voting Classifier</th>
+                      <td>0.90</td>
+                      <td>0.90</td>
+                      <td>0.90</td>
+                      <td>0.90</td>
+                    </tr>
+                  </tbody>
+                </table><br><br>
+        
+        </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- about section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="container"><br>
+        <p class="copyright" style="text-align:center; font-size: 18px;">© Depression Detector. All Rights Reserved.</p>
+    </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<!-- aos js file cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- custom js link  -->
+<script src="static/js/main.js"></script>
+
+
+<script>
+
+AOS.init({
+    duration:1000,
+    delay:400
+});
+
+</script>
+
+</body>
+</html>

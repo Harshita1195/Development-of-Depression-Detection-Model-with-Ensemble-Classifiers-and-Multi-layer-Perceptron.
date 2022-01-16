@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Detector</title>
+
+    <!-- aos css file cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="static/css/style.css">
+    
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+<div class="container">
+
+     <a href="{{ url_for('home')}}" class="logo"><span>D</span>epression <span>D</span>etector</a>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="{{ url_for('home')}}">Home</a></li>
+            <li><a href="{{ url_for('predictor')}}">Predictor</a></li>
+            <li><a href="{{ url_for('work')}}">Experimental Results</a></li>
+        </ul>
+    </nav>
+
+    <div class="fas fa-bars"></div>
+
+</div>
+
+</header>
+<br><br><br><br>
+<!-- about section start  -->
+
+<!--Logo-->
+<!-- about section start  -->
+
+<section class="about" id="about" style="background-color: #fae5df;">
+
+<div class="container">
+    <div class="row min-vh-100 align-items-center">
+        <div class="col-md content" data-aos="fade-right">
+            <div class="box"  style="text-align: justify;">
+                <h2>The designed detector takes text as an input from the user and returns the likelihood of depressive sentiment. Internally, the system utilizes multilayer perceptron model weights for making the prediction.</h2><br>
+                <form action="{{ url_for('predictor')}}" method="POST" style="font-size: 15px">
+                <div class="form-group">  
+                        <label style="font-size: 20px">Enter the text</label>
+                        <input type="text" class="form-control" style="font-size: 15px; padding: 50px 20px;" name="text" required="required"
+                        style="font-weight: bold">
+                </div>
+                <button class="button" type="submit ">Submit</button>
+                </form><br>
+
+                <p>{{txt}}</p>
+                <p>{{no_depression}}</p>
+                <p>{{depression}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</section>
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="container"><br>
+        <p class="copyright" style="text-align:center; font-size: 18px;">© Depression Detector. All Rights Reserved.</p>
+    </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<!-- aos js file cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- custom js link  -->
+<script src="static/js/main.js"></script>
+
+
+<script>
+
+AOS.init({
+    duration:1000,
+    delay:400
+});
+
+</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Predictor</title>
+</head>
+<body>
+	
+</body>
+</html>
